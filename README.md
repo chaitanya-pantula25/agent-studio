@@ -34,6 +34,7 @@ lib/
 
 1. Clone the repository:
    git clone https://github.com/YOUR_USERNAME/agent-studio.git
+   
    cd agent-studio
 
 2. Install dependencies:
