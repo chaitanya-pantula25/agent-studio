@@ -57,13 +57,52 @@
    GOOGLE_GENERATION_AI_API_KEY=your_gemini_key
    ```
 
-4. Initialize Supabase Schema:
-
-   Run the SQL provided in the documentation to enable pgvector and create the match_documents function.
-
-5. Run the development server:
+4. Run the development server:
 ```
    npm run dev
 ```
+
+## 🗄️ Supabase Setup
+
+Run the following SQL in your **Supabase SQL Editor** to initialize the vector database and the search function.
+
+```sql
+-- 1. Enable the pgvector extension to work with embeddings
+create extension if not exists vector;
+
+-- 2. Create the documents table
+create table documents (
+  id bigserial primary key,
+  content text,
+  metadata jsonb,
+  embedding vector(768) -- Matches Gemini's 768-dim output
+);
+
+-- 3. Create the RAG search function (Cosine Similarity)
+create or replace function match_documents (
+  query_embedding vector(768),
+  match_threshold float,
+  match_count int
+) returns table (
+  id bigint,
+  content text,
+  metadata jsonb,
+  similarity float
+) language plpgsql as $$
+begin
+  return query
+  select
+    documents.id,
+    documents.content,
+    documents.metadata,
+    1 - (documents.embedding <=> query_embedding) as similarity
+  from documents
+  where 1 - (documents.embedding <=> query_embedding) > match_threshold
+  order by similarity desc
+  limit match_count;
+end;
+$$;
+```
+
 ---
 **Developed by Chaitanya Pantula**
