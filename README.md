@@ -44,13 +44,13 @@ lib/
 
 3. Configure Environment Variables (.env.local):
 
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_key
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_key
 
-FIRECRAWL_API_KEY=your_firecrawl_key
+   FIRECRAWL_API_KEY=your_firecrawl_key
 
-GOOGLE_GENERATION_AI_API_KEY=your_gemini_key
+   GOOGLE_GENERATION_AI_API_KEY=your_gemini_key
 
 4. Initialize Supabase Schema:
 
