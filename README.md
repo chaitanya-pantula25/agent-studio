@@ -11,6 +11,23 @@
 - **📍 Source Citations**: Every AI response includes clickable, verified links to the source.
 - **🎨 Terminal UI**: A sleek, monospace-focused interface with live system logs.
 
+## 📖 Usage Examples
+
+### 📚 Technical Documentation (Next.js)
+- **Input URL:** `https://nextjs.org/docs/app/building-your-application/routing`
+- **Query:** "How does the App Router handle nested layouts?"
+- **AI Response:** Provides a precise technical summary based on the official documentation, including folder structure and `layout.js` behavior.
+
+### 🏛️ Historical Deep-Dives (Roman Empire)
+- **Input URL:** `https://en.wikipedia.org/wiki/Roman_Empire`
+- **Query:** "What were the primary reasons for the Crisis of the Third Century?"
+- **AI Response:** Synthesizes multiple historical factors (civil war, plague, economic depression) found across different sections of the 200k+ character article.
+
+### 🔬 Scientific Research (NASA)
+- **Input URL:** `https://www.nasa.gov/mission_pages/webb/main/index.html`
+- **Query:** "What are the primary mission goals of the James Webb Space Telescope?"
+- **AI Response:** Extracts specific mission objectives (observing the first light from stars, studying galaxy assembly) directly from the current NASA mission page.
+
 ## 🛠️ The Tech Stack
 
 - **Frontend**: Next.js 14 (App Router), Tailwind CSS, Lucide React
