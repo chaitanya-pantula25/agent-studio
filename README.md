@@ -33,23 +33,28 @@ lib/
 ## ⚙️ Installation & Setup
 
 1. Clone the repository:
+
    git clone https://github.com/YOUR_USERNAME/agent-studio.git
    
    cd agent-studio
 
 2. Install dependencies:
+
    npm install
 
 3. Configure Environment Variables (.env.local):
-   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_key
-   FIRECRAWL_API_KEY=your_firecrawl_key
-   GOOGLE_GENERATION_AI_API_KEY=your_gemini_key
+
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_key
+FIRECRAWL_API_KEY=your_firecrawl_key
+GOOGLE_GENERATION_AI_API_KEY=your_gemini_key
 
 4. Initialize Supabase Schema:
+
    Run the SQL provided in the documentation to enable pgvector and create the match_documents function.
 
 5. Run the development server:
+
    npm run dev
 
 ---
