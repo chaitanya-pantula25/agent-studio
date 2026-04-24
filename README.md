@@ -20,15 +20,18 @@
 
 ## 📂 Project Structure
 
-app/
-├── api/
-│   ├── chat/         # RAG logic & Gemini integration
-│   └── scrape/       # Crawling & Vectorization engine
-└── page.tsx          # Main dashboard UI
-components/
-└── ChatInterface.tsx # Interactive terminal component
-lib/
-└── supabase.ts       # Supabase client configuration
+```text
+├── app/
+│   ├── api/
+│   │   ├── chat/         # RAG logic & Gemini integration
+│   │   └── scrape/       # Crawling & Vectorization engine
+│   └── page.tsx          # Main dashboard UI
+├── components/
+│   └── ChatInterface.tsx # Interactive terminal component
+├── lib/
+│   └── supabase.ts       # Supabase client configuration
+└── README.md
+```
 
 ## ⚙️ Installation & Setup
 
